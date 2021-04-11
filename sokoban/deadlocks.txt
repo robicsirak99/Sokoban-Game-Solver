@@ -1,0 +1,79 @@
+-----------DEADLOCKS------------
+
+
+Dead Square Deadlocks
+---------------------
+
+Dead square deadlocks are squares in a level that immediately create a deadlock situation when pushing a box to them.
+
+-példa: 
+
+#######                 # fal
+#xxxxx#                 - üres hely
+#x@$-.#                 $ doboz
+#xxxxx#                 @ játékos
+#######                 . célhely
+
+-az összes x-el jelölt helyre tolt doboz Dead Square Deadlockot eredményez
+
+
+Freeze Deadlocks
+----------------
+
+Sometimes boxes become immoveable. If a box becomes immoveable while not being located on a goal the whole level is deadlocked. 
+The box is "frozen" on that square and can never be pushed again!
+
+-példa:
+
+#######                 # fal
+#-$-..#                 - üres hely
+#--$--#                 $ doboz
+#--@--#                 @ játékos
+#######                 . célhely
+
+-ha a jétékos feltolja a dobozt, akkor Freeze Deadlock helyzet alakul ki
+
+########                 # fal
+#---#--#		 5 doboz a célon
+#--5-$@#                 - üres hely
+#.55---#                 $ doboz
+###----#                 @ játékos
+########                 . célhely
+
+-ha a játékos balra tolja a dobozt, akkor Freeze Deadlock helyzet alakul ki
+
+
+Corral Deadlocks
+----------------
+
+A corral is an area the player can't reach.
+
+-példa:
+
+########                 # fal
+#.--$xx#                 - üres hely
+#.@$xxx#                 $ doboz
+########                  @ játékos
+########                 . célhely
+
+-az x-el jelölt helyekre a játékos nem juthat el, ha a dobozt jobbra tolja Corral Deadlock helyzet alakul ki, mert a dobozok már nem kerülhetnek a célhelyeikre 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
